@@ -7,7 +7,7 @@ npm run deploy
 */
 
 // ─── Toggle to show your photo ────────────────────────
-const USE_MY_IMAGE = false;
+const USE_MY_IMAGE = true;
 // ─────────────────────────────────────────────────────
 
 const DATA = {
@@ -86,6 +86,8 @@ const Arrow = () => (
   </svg>
 );
 
+import me from "./assets/me.png"
+
 // ─── App ──────────────────────────────────────────────
 export default function App() {
   return (
@@ -110,7 +112,7 @@ export default function App() {
 
           {USE_MY_IMAGE ? (
             <div className="hero__photo-wrap">
-              <img src="./assets/me.jpeg" alt={DATA.name} className="hero__photo" />
+              <img src={me} alt={DATA.name} className="hero__photo" />
             </div>
           ) : (
             <div className="hero__photo-wrap">
