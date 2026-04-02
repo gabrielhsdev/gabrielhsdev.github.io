@@ -7,7 +7,7 @@ npm run deploy
 */
 
 // ─── Toggle to show your photo ────────────────────────
-const USE_MY_IMAGE = true;
+const USE_MY_IMAGE = false;
 // ─────────────────────────────────────────────────────
 
 const DATA = {
