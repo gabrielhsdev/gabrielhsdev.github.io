@@ -125,7 +125,7 @@ export default function App() {
 
           <div className="hero__eyebrow">{DATA.title}</div>
           <h1 className="hero__name">
-            Gabriel<br /><em>da Silva</em>
+            Gabriel Henrique<br /><em>da Silva</em>
           </h1>
           <p className="hero__sub">{DATA.about}</p>
           <div className="hero__meta">
