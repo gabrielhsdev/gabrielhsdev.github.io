@@ -25,7 +25,10 @@ const DATA = {
     { label: "Languages",       value: "TypeScript, JavaScript, Python, Go, C++, PHP" },
     { label: "Frameworks / UI", value: "React, Next.js, Laravel, Tailwind, MUI, React Native" },
     { label: "Infra / Tools",   value: "Docker, NGINX, AWS, PostgreSQL, MySQL, Firebase, Vercel" },
-    { label: "Languages",       value: "Portuguese — native · English — fluent" },
+  ],
+  languages: [
+    {name: "Portuguese", level: "Native"},
+    {name: "English",    level: "Fluent"},
   ],
 
   education: [
@@ -155,6 +158,24 @@ export default function App() {
                 <span className="row-table__value">{row.value}</span>
               </div>
             ))}
+          </div>
+
+          <div style={{ height: 18 }} />
+
+          <h3 className="section-subtitle">Languages</h3>
+          <div className="row-table">
+            {DATA.languages.map((lang, i) => (
+              <div key={i} className="row-table__item">
+                <span className="row-table__label">{lang.name}</span>
+                <span className="row-table__value">{lang.level}</span>
+              </div>
+            ))}
+          </div>
+
+          <div style={{ height: 18 }} />
+
+          <h3 className="section-subtitle">Education</h3>
+          <div className="row-table">
             {DATA.education.map((e, i) => (
               <div key={i} className="row-table__item">
                 <span className="row-table__label">{e.period}</span>
