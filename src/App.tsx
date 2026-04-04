@@ -45,9 +45,11 @@ const DATA: Data = {
   about: "Full Stack Developer with 3+ years building and scaling web products. I work across the stack — React, TypeScript, Laravel, PostgreSQL — and care about performance, clean code, and shipping things that last.",
 
   skills: [
-    { label: "Languages",       value: "TypeScript, JavaScript, Python, Go, C++, PHP" },
-    { label: "Frameworks / UI", value: "React, Next.js, Laravel, Tailwind, MUI, React Native" },
-    { label: "Infra / Tools",   value: "Docker, NGINX, AWS, PostgreSQL, MySQL, Firebase, Vercel" },
+    { label: "Programming",  value: "TypeScript, JavaScript, Python, Go, C++, PHP" },
+    { label: "Frontend",     value: "React, Next.js, Tailwind CSS, MUI, Chakra UI, React Native" },
+    { label: "Backend",      value: "Node.js, Laravel, REST APIs, WebSockets, Redis" },
+    { label: "Databases",    value: "MySQL, PostgreSQL, MongoDB" },
+    { label: "Infra & Tools", value: "Docker, NGINX, AWS (EC2, S3, RDS, Lambda), Firebase, Git, Vercel" },
   ],
   languages: [
     {name: "Portuguese", level: "Native"},
@@ -112,6 +114,12 @@ const Arrow = (): JSX.Element => (
   </svg>
 );
 
+const Download = (): JSX.Element => (
+  <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
+    <path d="M6 1v7M3 5.5l3 3 3-3M1 10h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
 import type { JSX } from "react";
 import me from "./assets/me.png"
 
@@ -164,6 +172,9 @@ export default function App(): JSX.Element {
             </a>
             <a href={`mailto:${DATA.email}`} className="inline-link">
               Email <Arrow />
+            </a>
+            <a href="./assets/resume.pdf" download="Gabriel_Henrique_da_Silva_Resume.pdf" className="inline-link">
+              Resume PDF <Download />
             </a>
           </div>
         </div>
@@ -285,6 +296,12 @@ export default function App(): JSX.Element {
             <div className="row-table__item">
               <span className="row-table__label">Phone</span>
               <span className="row-table__value">{DATA.phone}</span>
+            </div>
+            <div className="row-table__item">
+              <span className="row-table__label">Resume</span>
+              <a href="./assets/resume.pdf" download="Gabriel_Henrique_da_Silva_Resume.pdf" className="row-table__value inline-link">
+                Download PDF <Download />
+              </a>
             </div>
           </div>
         </div>
