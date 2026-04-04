@@ -1,0 +1,124 @@
+%% Gabriel Henrique da Silva — Resume
+%% Compile with: pdflatex resume.tex
+
+\documentclass[11pt, a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage{lmodern}  % Uncomment if available in your TeX distribution
+\usepackage[top=1.0cm, bottom=1.0cm, left=1.6cm, right=1.6cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+
+% ---------- Colors ----------
+\definecolor{accent}{HTML}{2e3439}
+\definecolor{subtle}{HTML}{555555}
+
+% ---------- Hyperlinks ----------
+\hypersetup{
+    colorlinks=true,
+    urlcolor=accent,
+    linkcolor=accent
+}
+
+% ---------- Section Formatting ----------
+\titleformat{\section}
+    {\large\bfseries\color{accent}}
+    {}{0em}{}
+    [\vspace{-6pt}\rule{\linewidth}{0.8pt}\vspace{2pt}]
+
+\titlespacing{\section}{0pt}{5pt}{1pt}
+
+% ---------- No page numbers ----------
+\pagestyle{empty}
+
+% ---------- List settings ----------
+\setlist[itemize]{leftmargin=1.5em, itemsep=0pt, topsep=1pt, parsep=0pt}
+
+% ---------- Tighten paragraph spacing ----------
+\setlength{\parskip}{2pt}
+
+% ============================================================
+\begin{document}
+
+% ---------- Header ----------
+\begin{center}
+    {\LARGE\bfseries Gabriel Henrique da Silva} \\[3pt]
+    {\large\color{subtle} Full Stack Developer} \\[5pt]
+    S\~{a}o Paulo, Brazil \quad|\quad
+    \href{tel:+5519989668625}{+55 (19) 98966-8625} \quad|\quad
+    \href{mailto:henriquegabrielhs21@gmail.com}{henriquegabrielhs21@gmail.com} \\[2pt]
+    \href{https://www.linkedin.com/in/gabrielhenriquedev}{linkedin.com/in/gabrielhenriquedev} \quad|\quad
+    \href{https://github.com/gabrielhsdev}{github.com/gabrielhsdev}
+    \quad|\quad
+    \href{https://gabrielhsdev.github.io}{gabrielhsdev.github.io}
+\end{center}
+
+% ---------- Skills ----------
+\section{Skills}
+
+\textbf{Programming:} TypeScript, JavaScript, Python, Go, Java, C++, PHP \\
+\textbf{Frontend:} React, Next.js, Tailwind CSS, MUI, Chakra UI, React Native \\
+\textbf{Backend:} Node.js, Laravel, Spring Boot,REST APIs, WebSockets, Redis \\
+\textbf{Databases:} MySQL, PostgreSQL, MongoDB \\
+\textbf{Infra \& Tools:} Docker, NGINX, AWS (EC2, S3, RDS, Lambda), Firebase, Git, Vercel, Databricks
+
+% ---------- Experience ----------
+\section{Experience}
+
+\textbf{Software Developer} \hfill 2025 -- Present \\
+\textit{OneTouch Health} \hfill S\~{a}o Paulo, BR -- Remote
+
+\begin{itemize}
+    \item Designed and implemented the \textbf{first version of the carer-facing API and React app} across \textbf{50+ client companies} — architected and shipped to production, processing up to \textbf{2,000 real-time scheduling events per minute} across \textbf{1,000--2,000 active carers}.
+    \item Resolved critical performance bottlenecks on tables exceeding \textbf{10 million rows}, cutting query execution \textbf{from minutes to under 2 seconds} and enabling \textbf{20,000+ users} to reliably access daily dashboards and reports.
+    \item Eliminated \textbf{50--100 redundant API calls per minute} caused by unguarded frontend re-renders, reducing server load by \textbf{$\sim$60\%}.
+    \item \textbf{Mentored and onboarded 10+ developers}, producing internal technical references and conducting 1-on-1 code reviews that reduced onboarding time \textbf{from $\sim$2 weeks to 3--4 days}.
+    \item Diagnosed and resolved \textbf{50+ production incidents}, cutting weekly support escalations by \textbf{$\sim$50\%}.
+\end{itemize}
+
+\textbf{Junior Software Developer} \hfill 2022 -- 2024 \\
+\textit{OneTouch Health} \hfill S\~{a}o Paulo, BR -- Remote
+
+\begin{itemize}
+    \item Owned the full migration of legacy PHP/HTML/jQuery systems to Laravel and React across \textbf{50+ client companies}, cutting the slowest page loads \textbf{from 1--2 minutes to under 5 seconds} and retiring \textbf{5+ years} of accumulated maintenance debt.
+    \item Drove end-to-end feature delivery as the \textbf{primary frontend developer}, shipping \textbf{100+ features} in React with Tailwind and MUI at pixel-level fidelity.
+    \item Built data analysis reports adopted by \textbf{20+ clients}, saving each \textbf{5--10 hours of manual reporting per week} and resolving \textbf{100+ bugs} that had been blocking daily operations.
+\end{itemize}
+
+% ---------- Open Source ----------
+\section{Open Source}
+
+\textbf{ImprovedTube} \hfill \href{https://github.com/code-charity/youtube}{github.com/code-charity/youtube} \\
+\textit{Chrome Extension} \quad \textcolor{subtle}{\small 400{,}000+ active users}
+
+\begin{itemize}
+    \item Shipped \textbf{2 merged PRs} adding feature improvements and UI enhancements to one of the most widely used open-source YouTube extensions, directly impacting \textbf{400,000+ active users}.
+    \item Collaborated with maintainers on code reviews and resolved issues affecting core extension functionality.
+\end{itemize}
+
+\vspace{2pt}
+\textbf{Rosindex} \hfill \href{https://github.com/ros-infrastructure/rosindex}{github.com/ros-infrastructure/rosindex} \\
+\textit{ROS Index}
+
+\begin{itemize}
+    \item Achieved \textbf{100\% error reporting coverage} by implementing structured GitHub issue forms, streamlining bug triage, reducing tracker noise, and \textbf{directly contributed to resolving 200+ issues.}
+\end{itemize}
+
+% ---------- Languages ----------
+\section{Languages}
+
+Portuguese --- Native | English --- Fluent
+
+% ---------- Education ----------
+\section{Education}
+
+\textbf{Bachelor of Software Engineering} --- PUC, Campinas, Brazil \hfill 2022 -- 2025 \\
+\textbf{Aerospace Engineering} --- IST, Lisbon, Portugal \hfill 2020 -- 2022 \\
+\textbf{Technician in Software Development} --- Unicamp, Brazil \hfill 2016 -- 2018
+
+\end{document}
