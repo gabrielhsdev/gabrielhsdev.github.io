@@ -10,7 +10,30 @@ npm run deploy
 const USE_MY_IMAGE = true;
 // ─────────────────────────────────────────────────────
 
-const DATA = {
+// Types for DATA
+type Skill = { label: string; value: string };
+type Language = { name: string; level: string };
+type Education = { degree: string; school: string; period: string };
+type Experience = { role: string; company: string; where: string; period: string; bullets: string[] };
+type Project = { name: string; type: string; badge: string | null; href: string; desc: string };
+
+type Data = {
+  name: string;
+  title: string;
+  location: string;
+  email: string;
+  phone: string;
+  linkedin: { label: string; href: string };
+  github: { label: string; href: string };
+  about: string;
+  skills: Skill[];
+  languages: Language[];
+  education: Education[];
+  experience: Experience[];
+  projects: Project[];
+};
+
+const DATA: Data = {
   name:       "Gabriel Henrique da Silva",
   title:      "Full Stack Developer",
   location:   "São Paulo, Brazil",
@@ -83,16 +106,17 @@ const DATA = {
 };
 
 // ─── Tiny icons ───────────────────────────────────────
-const Arrow = () => (
+const Arrow = (): JSX.Element => (
   <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
     <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 );
 
+import type { JSX } from "react";
 import me from "./assets/me.png"
 
 // ─── App ──────────────────────────────────────────────
-export default function App() {
+export default function App(): JSX.Element {
   return (
     <div>
 
