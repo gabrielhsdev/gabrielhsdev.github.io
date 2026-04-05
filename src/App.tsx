@@ -42,7 +42,7 @@ const DATA: Data = {
   linkedin:   { label: "linkedin.com/in/gabrielhenriquedev", href: "https://www.linkedin.com/in/gabrielhenriquedev" },
   github:     { label: "github.com/gabrielhsdev",            href: "https://github.com/gabrielhsdev" },
 
-  about: "Full Stack Developer with 3+ years building and scaling production web apps. TypeScript, React, Node.js, PostgreSQL, Python, AWS. I care about performance, clean architecture, and shipping things that last.",
+  about: "Full Stack Developer with 3+ years building and scaling production apps. TypeScript, React, Node.js, PostgreSQL, Python, AWS. I care about performance, clean architecture, and shipping things that last.",
 
   skills: [
     { label: "Languages",    value: "TypeScript, JavaScript, Python, Go, Java, C++, PHP" },
