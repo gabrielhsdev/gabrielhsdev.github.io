@@ -123,6 +123,7 @@ const Download = (): JSX.Element => (
 
 import type { JSX } from "react";
 import me from "./assets/me.png"
+import resume from "./assets/resume.pdf"
 
 // ─── App ──────────────────────────────────────────────
 export default function App(): JSX.Element {
@@ -174,7 +175,7 @@ export default function App(): JSX.Element {
             <a href={`mailto:${DATA.email}`} className="inline-link">
               Email <Arrow />
             </a>
-            <a href="./assets/resume.pdf" download="Gabriel_Henrique_da_Silva_Resume.pdf" className="inline-link">
+            <a href={resume} download="Gabriel_Henrique_da_Silva_Resume.pdf" className="inline-link">
               Resume PDF <Download />
             </a>
           </div>
@@ -300,7 +301,7 @@ export default function App(): JSX.Element {
             </div>
             <div className="row-table__item">
               <span className="row-table__label">Resume</span>
-              <a href="./assets/resume.pdf" download="Gabriel_Henrique_da_Silva_Resume.pdf" className="row-table__value inline-link">
+              <a href={resume} download="Gabriel_Henrique_da_Silva_Resume.pdf" className="row-table__value inline-link">
                 Download PDF <Download />
               </a>
             </div>
